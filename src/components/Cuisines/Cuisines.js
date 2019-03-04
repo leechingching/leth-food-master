@@ -13,7 +13,7 @@ class Cuisines extends Component {
     changed: false
   }
   componentDidMount() {
-        const config = { headers: {'user-key': process.env.REACT_APP_WEATHER_API_KEY } };
+        const config = { headers: {'user-key': process.env.REACT_APP_FOOD_API_KEY } };
     // The dault search value "American food"
       // If the user selected an option & submitted, we update the sortData value with the id
       axios.get(`https://developers.zomato.com/api/v2.1/cuisines?city_id=2891` , config) 

@@ -36,7 +36,7 @@ class Guide extends Component {
     }
 
     getZomato() {
-        const config = { headers: {'user-key': process.env.REACT_APP_WEATHER_API_KEY } };
+        const config = { headers: {'user-key': process.env.REACT_APP_FOOD_API_KEY } };
         // The dault search value "American food"
         // If the user selected an option & submitted, we update the sortData value with the id
         axios.get(`/search?entity_id=2891&entity_type=city&count=50&sort=rating$&cuisines=${this.props.value}` , config) 

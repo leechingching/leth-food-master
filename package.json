@@ -2,7 +2,7 @@
   "name": "Leth-food-master",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://chingchinglcc.github.io/react-lethbridge-food",
+  "homepage": "http://leechingching.github.io/leth-food-master",
   "dependencies": {
     "axios": "^0.18.0",
     "google-map-react": "^1.1.1",
