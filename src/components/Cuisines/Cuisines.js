@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Guide from '../Guide/Guide';
 import styles from '../../styles/app.module.scss';
-import Select from 'react-select'
+// import Select from 'react-select'
 
 class Cuisines extends Component {
   state = {
