@@ -1,0 +1,217 @@
+// Global
+// ***********************
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: block;
+}
+
+p,
+select,
+button {
+    font-family: $nunito;
+}
+
+
+// For the App.js
+// ***********************
+.container {
+    height: 100vh;
+}
+
+
+// For the Header.js
+// ***********************
+.HeaderWrapper {
+    width: 100%;
+    height: 50vh;
+    // min-height: 50vh;
+    background: $orange;
+}
+
+h1.appTitle {
+    @include display-font(50px);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    transform: rotate(-8deg);
+    padding-top: ($sec-margin/2 + 1rem);
+
+    @include if-min-width($tablet) {
+        @include display-font(100px);
+    }
+
+    // @include if-min-width($desktop) {
+    //     @include display-font(100px);
+    // }
+
+    .appTitle__lethbridge {
+        @include if-min-width($desktop) {
+            padding-top: ($sec-margin);
+            font-size: 120px;
+        }
+    }
+
+
+}
+
+
+// Cuisines.js
+// ***********************
+
+.Cuisines {
+    height: 50vh;
+    min-height: 50vh;
+    text-align: center;
+    background: $beach;
+
+    .CuisinesSelect {
+        @include border-radius($border-radius);
+        @include flexbox;
+        box-shadow: 1px 0.5px 1px 0px rgba(112, 76, 22, 0.69);
+        position: absolute;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        background: $white;
+        margin: auto;
+
+        // @include if-min-width($tablet) {
+        //     width: 70%;
+        // }
+
+        @include if-min-width($desktop) {
+            width: calc(42% - 1vw);
+        }
+
+
+        .select__container {
+            @include flex(2 1 auto);
+            text-align: center;
+
+            &::after {
+                content: " ";
+                position: absolute;
+                top: 50%;
+                margin-top: -2px;
+                right: 100px;
+                width: 0;
+                height: 0;
+                border-left: 5px solid transparent;
+                border-right: 5px solid transparent;
+                border-top: 5px solid $grey;
+
+                @include if-min-width($desktop) {
+                    border-left: 10px solid transparent;
+                    border-right: 10px solid transparent;
+                    border-top: 10px solid $grey;
+                    right: 150px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+        select.CuisinesSelect {
+            @include border-radius($border-left);
+            padding: .6em .5em;
+            border: none;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: $black;
+            background: $white;
+            font-size: .75rem;
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+
+            @include if-min-width($desktop) {
+                padding: 1.5em .5em;
+                font-size: 1.2rem;
+            }
+
+            .CuisinesSelectOptions {
+                color: 'blue';
+            }
+
+        }
+
+
+    }
+}
+
+// Suggestion.js
+// ***********************
+
+.Suggestion {
+    @include border-radius($border-left);
+    //background: $orange;
+
+    h2 {
+        @include font-style($mont, $fw--2, $white, $height: auto, $spacing: 5px);
+    }
+
+
+    .Suggestion__mySuggestion {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        bottom: -200px;
+
+        @include if-min-width($desktop) {
+            bottom: -350px;
+        }
+
+        .mySuggestion__name {
+            @include display-font(20px);
+            color: #FF933D;
+            text-transform: capitalize;
+
+            @include if-min-width($desktop) {
+                @include display-font(60px);
+                color: #FF933D;
+            }
+        }
+
+        .mySuggestion__address {
+            margin-top: 0;
+            font-family: $mont;
+            color: $black;
+        }
+    }
+
+    button {
+        @include border-radius($border-right);
+        position: relative;
+        width: 80px;
+        height: 100%;
+        border: none;
+        background: $orange--2;
+        font-weight: $fw--3;
+        font-size: 15px;
+        text-align: center;
+        color: $white;
+        cursor: pointer;
+
+        @include if-min-width($desktop) {
+            width: 120px;
+            font-size: 35px;
+        }
+    }
+}

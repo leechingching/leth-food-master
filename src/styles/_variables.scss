@@ -1,0 +1,57 @@
+// Width
+$mobile-large: 400px;
+$tablet: 768px;
+$desktop: 900px;
+
+@mixin if-min-width($width) {
+    @media screen and (min-width: $width) {
+        @content;
+    }
+}
+
+// Colors
+$orange: #f39c12;
+$orange--2: #FF933D;
+$beach: #FFFCE6;
+$green: #cfe053;
+$blue: #9de6e8;
+$white: #ffffff;
+$grey: #e0e0e0;
+$black: #282823;
+
+
+// Font
+$nunito: 'Nunito Sans',
+sans-serif;
+$mont: 'Montserrat',
+sans-serif;
+$leckerli:'Leckerli One',
+cursive;
+
+$fw--1: 400;
+$fw--2: 600;
+$fw--3: 800;
+
+$sec-margin: 8rem;
+
+$border-radius: 10px;
+$border-right: 0 $border-radius $border-radius 0;
+$border-left: $border-radius 0px 0px $border-radius;
+
+@mixin font-style($family, $weight, $color, $height, $spacing) {
+    font-family: $family;
+    font-weight: $weight;
+    color: $color;
+    line-height: $height;
+    letter-spacing: $spacing;
+}
+
+@mixin heading--1 {
+    @include font-style($nunito, $fw--3, $white, normal, auto);
+}
+
+@mixin display-font($size: 25px, $color:$white) {
+    font-family: $leckerli;
+    font-size: $size;
+    color: $color;
+}

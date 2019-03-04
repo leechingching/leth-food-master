@@ -1,0 +1,43 @@
+{
+  "name": "Leth-food-master",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "http://chingchinglcc.github.io/react-lethbridge-food",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "google-map-react": "^1.1.1",
+    "package.json": "^2.0.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^6.0.0",
+    "react-scripts": "2.1.1",
+    "react-select": "^2.3.0",
+    "react-transition-group": "^2.5.3",
+    "redux": "^4.0.1",
+    "zomato.js": "^1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "css-loader": "^2.0.1",
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1"
+  }
+}
