@@ -1,5 +1,5 @@
 # api keys
-
+ .env
 
 # dependencies
 .DS_STORE
